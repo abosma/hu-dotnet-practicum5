@@ -5,6 +5,13 @@ VisualStudioVersion = 15.0.27705.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPracticum5", "DotNetPracticum5\DotNetPracticum5.csproj", "{A74A0A52-5BD9-49EB-BDF0-2D980A1B532A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFGUI", "WFGUI\WFGUI.csproj", "{A323865E-3610-4918-A89E-856DCD960A8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFGUI", "WPFGUI\WPFGUI.csproj", "{07BB81DB-D576-438F-AD8F-0BA5ED7D38CE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A74A0A52-5BD9-49EB-BDF0-2D980A1B532A} = {A74A0A52-5BD9-49EB-BDF0-2D980A1B532A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,14 @@ Global
 		{A74A0A52-5BD9-49EB-BDF0-2D980A1B532A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A74A0A52-5BD9-49EB-BDF0-2D980A1B532A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A74A0A52-5BD9-49EB-BDF0-2D980A1B532A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A323865E-3610-4918-A89E-856DCD960A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A323865E-3610-4918-A89E-856DCD960A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A323865E-3610-4918-A89E-856DCD960A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A323865E-3610-4918-A89E-856DCD960A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BB81DB-D576-438F-AD8F-0BA5ED7D38CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BB81DB-D576-438F-AD8F-0BA5ED7D38CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BB81DB-D576-438F-AD8F-0BA5ED7D38CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BB81DB-D576-438F-AD8F-0BA5ED7D38CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

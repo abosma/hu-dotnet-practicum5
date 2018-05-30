@@ -1,0 +1,29 @@
+﻿<Page x:Class="WPFGUI.ShopPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFGUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ShopPage">
+
+    <Grid>
+        <Label Content="Current User: " HorizontalAlignment="Left" Margin="9,9,0,0" VerticalAlignment="Top"/>
+        <Label Name="UsernameLabel" Content="Label" HorizontalAlignment="Left" Margin="87,9,0,0" VerticalAlignment="Top"/>
+        <ListView Name="ShopInventory" HorizontalAlignment="Left" Height="110" Margin="236,32,0,0" VerticalAlignment="Top" Width="170" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListBox Name="UserInventory" HorizontalAlignment="Left" Height="110" Margin="10,32,0,0" VerticalAlignment="Top" Width="170"/>
+        <Label Name="ShopError" Content="Label" HorizontalAlignment="Left" Margin="211,9,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label Content="Account Balance: " HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
+        <Label Name="UserMoney" Content="Label" HorizontalAlignment="Left" Margin="111,163,0,0" VerticalAlignment="Top"/>
+        <Button Click="Buy" Content="Buy" HorizontalAlignment="Left" Margin="236,166,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="Logout" Content="Logout" HorizontalAlignment="Left" Margin="331,166,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Page>

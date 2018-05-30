@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DotNetPracticum5.DatabaseControllers;
+using DotNetPracticum5.Model;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -10,22 +13,50 @@ namespace DotNetPracticum5
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public List<Inventory> GetInventory()
         {
-            return string.Format("You entered: {0}", value);
+            return InventoryController.GetInventories();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public bool BuyProduct(int UserId, int ProductId)
         {
-            if (composite == null)
+            return ProductController.BuyProduct(UserId, ProductId);
+        }
+
+        public List<UserProducts> GetUserProducts(int UserId)
+        {
+            return ProductController.GetProductsOfUser(UserId);
+        }
+
+        public bool Login(string Username, string Password)
+        {
+            if (UserController.GetUser(Username, Password) != null)
             {
-                throw new ArgumentNullException("composite");
+                return true;
             }
-            if (composite.BoolValue)
+            else
             {
-                composite.StringValue += "Suffix";
+                return false;
             }
-            return composite;
+        }
+
+        public String Register(string Username)
+        {
+            String returnString = UserController.InsertUser(Username, Helper.Reverse(Username));
+
+            if (!String.IsNullOrEmpty(returnString))
+            {
+                return "Your password is: " + returnString;
+            }
+            else
+            {
+                return "User Register failed, please contact Atilla";
+            }
+        }
+
+        public User GetUserByUsername(string Username)
+        {
+            return UserController.GetUserByUsername(Username);
         }
     }
 }
